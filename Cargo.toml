@@ -26,6 +26,8 @@ portable = [ "blst/portable", "semolina/portable" ]
 # Enable ADX even if the host CPU doesn't support it.
 # Binary can be executed on Broadwell+ and Ryzen+ systems.
 force-adx = [ "blst/force-adx", "semolina/force-adx" ]
+# Enable CUDA, compile with nvcc, and link to GPU kernels
+cuda = []
 cuda-mobile = []
 
 [dependencies]
