@@ -30,6 +30,7 @@ fn main() {
         compile_cuda("cuda/vesta.cu", "vesta_msm_cuda", implement_sort);
         println!("cargo:rerun-if-changed=cuda");
         println!("cargo:rerun-if-env-changed=CXXFLAGS");
+        #[cfg(feature = "cuda")]
         println!("cargo:rustc-cfg=feature=\"cuda\"");
     }
     println!("cargo:rerun-if-env-changed=NVCC");
